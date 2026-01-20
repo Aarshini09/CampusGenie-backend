@@ -95,10 +95,16 @@
     </div>
 
 </div>
+    let lastTaskTitle = "";
+    let lastTaskDate = "";
+    let lastTasksSummary = "";
 
 <script>
     // URL Here
-    const API_BASE_URL = "https://campusgenie-api.onrender.com"; 
+    const API_BASE_URL = "https://campusgenie-api.onrender.com";
+    let lastTaskTitle = "";
+    let lastTaskDate = "";
+    let lastTasksSummary = "";
 
     function goToScreen(screenId) {
         document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -137,9 +143,16 @@
 
             const data = await response.json();
 
-            document.getElementById('res-title').innerText = data.title || "No Title Found";
-            document.getElementById('res-date').innerText = "📅 " + (data.date || "No Date");
-            document.getElementById('res-desc').innerText = "Source: " + (data.summary || "No Summary");
+            const title = typeof data.title === "object" ? JSON.stringify(data.title) : data.title;
+            const date = typeof data.date === "object" ? JSON.stringify(data.date) : data.date;
+            const summary = typeof data.summary === "object" ? JSON.stringify(data.summary) : data.summary;
+
+           document.getElementById('res-title').innerText = title || "No Title Found";
+           document.getElementById('res-date').innerText = "📅 " + (date || "No Date");
+           document.getElementById('res-desc').innerText = "Source: " + (summary || "No Summary");
+            lastTaskTitle = title;
+            lastTaskDate = date;
+            lastTasksSummary = summary;
 
             goToScreen('result-screen');
 
@@ -160,7 +173,7 @@
             const response = await fetch(`${API_BASE_URL}/add-to-calendar`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ action: "trigger_droidrun" })
+                body: JSON.stringify({ title: lastTaskTitle, date: lastTaskDate, description: lastTaskSummary})
             });
 
             const data = await response.json();
