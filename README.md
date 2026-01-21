@@ -10,7 +10,6 @@ CampusGenie is a productivity tool built to help students manage academic chaos.
 * **UI Development:** Designed and built the screens for Home, Message Analysis, and Deadline Cards.
 * **API Integration:** Connected the frontend button clicks to the backend APIs (`/analyze`, `/explain`) so the app actually works.
 * **Error Handling:** Wrote the logic to show success/error messages (e.g., when a calendar event is added successfully).
-* **Pitch/Demo:** Recorded the demo video and handled the project walkthrough.
 
 ### 🧠 Adarsh (Prompt Engineering & Logic)
 * **Prompt Design:** Wrote the specific system prompts to make the AI understand casual Hinglish messages (e.g., "Kal submit karna hai").
@@ -21,6 +20,7 @@ CampusGenie is a productivity tool built to help students manage academic chaos.
 * **Server Setup:** Built the backend server (Flask/Node) to handle requests from the frontend.
 * **Droidrun SDK:** Handled the Droidrun integration to trigger the native Android calendar intent (this opens the actual calendar app with details pre-filled).
 * **LLM Connection:** Wrote the backend scripts to send user data to the AI API and fetch the response.
+* **Pitch & Demo:** Recorded the demo video, explained the workflow, and handled the project presentation.
 
 ---
 
