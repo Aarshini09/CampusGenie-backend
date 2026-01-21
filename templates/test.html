@@ -125,11 +125,11 @@
         }
     }
 
-    // --- API 1: ANALYZE MESSAGE ---
+    // -- API 1: ANALYZE MESSAGE --
     async function callAnalyzeAPI() {
         const text = document.getElementById('msgInput').value;
         
-        // --- FIXED ALERT HERE ---
+        // -- FIXED ALERT HERE --
         if(!text) return alert("Please paste a message first!"); 
 
         showLoading('btn-analyze', true);
@@ -158,7 +158,7 @@
 
         } catch (error) {
             console.error(error);
-            // --- FIXED ALERT HERE ---
+            // -- FIXED ALERT HERE --
             alert("Error: Could not connect to Backend! (Check URL)");
         } finally {
             showLoading('btn-analyze', false);
