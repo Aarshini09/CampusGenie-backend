@@ -1,4 +1,4 @@
-# 🎓 CampusGenie - AI Academic Assistant
+# 🎓 CampusGenie - YOUR_AI_BUDDY
 
 ![HTML5](https://img.shields.io/badge/Frontend-HTML5-orange?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/Style-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
