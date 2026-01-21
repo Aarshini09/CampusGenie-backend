@@ -1,38 +1,93 @@
-# 🎓 CampusGenie
+# 🎓 CampusGenie - AI Academic Assistant
 
-CampusGenie is a productivity tool built to help students manage academic chaos. It takes unstructured WhatsApp messages (like assignment updates), extracts the deadlines using AI, and adds them directly to your Android calendar.
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Backend-Flask-green?style=for-the-badge&logo=flask&logoColor=white)
+![Gemini](https://img.shields.io/badge/AI-Gemini%20Pro-orange?style=for-the-badge&logo=google&logoColor=white)
+![Droidrun](https://img.shields.io/badge/Automation-Droidrun-red?style=for-the-badge)
 
----
+> **"Turning WhatsApp Chaos into Calendar Clarity."**
 
-## 👥 Team & Contributions
-
-### 🎨 Vaibhav Singh (Frontend & UI)
-* **UI Development:** Designed and built the screens for Home, Message Analysis, and Deadline Cards.
-* **API Integration:** Connected the frontend button clicks to the backend APIs (`/analyze`, `/explain`) so the app actually works.
-* **Error Handling:** Wrote the logic to show success/error messages (e.g., when a calendar event is added successfully).
-
-### 🧠 Adarsh Mishra (Prompt Engineering & Logic)
-* **Prompt Design:** Wrote the specific system prompts to make the AI understand casual Hinglish messages (e.g., "Kal submit karna hai").
-* **Data Extraction:** Configured the LLM to return data in strict JSON format so the code can read dates and titles accurately.
-* **Study Helper:** Created the logic for the "Topic Explanation" feature to break down complex concepts into simple bullet points.
-
-### ⚙️ Antra Priyadarshini (Backend & Automation)
-* **Server Setup:** Built the backend server (Flask/Node) to handle requests from the frontend.
-* **Droidrun SDK:** Handled the Droidrun integration to trigger the native Android calendar intent (this opens the actual calendar app with details pre-filled).
-* **LLM Connection:** Wrote the backend scripts to send user data to the AI API and fetch the response.
-* **Pitch & Demo:** Recorded the demo video, explained the workflow, and handled the project presentation.
+**CampusGenie** is a smart student productivity tool designed to solve the problem of missed deadlines hidden in hundreds of WhatsApp messages. It uses GenAI to parse informal text and Droidrun automation to sync events directly to the Android Calendar.
 
 ---
 
-## 🚀 What it does
-1.  **Smart Parsing:** You paste a message, and it finds the hidden deadlines.
-2.  **One-Tap Calendar:** Uses Droidrun to add events to your phone's calendar instantly.
-3.  **Topic Explainer:** Explains confusing study topics simply with examples.
+## 🏗️ How It Works (The Flow)
+1.  **Input:** User pastes a messy WhatsApp message (e.g., *"Kal maths ka assignment submit karna hai aur 18 ko quiz hai"*).
+2.  **Processing:** The backend sends this text to our **Fine-Tuned LLM** (Gemini) with custom prompt engineering.
+3.  **Extraction:** The AI converts the text into structured JSON data (Title, Date, Time, Priority).
+4.  **Action:** The app uses **Droidrun SDK** to instantly open the native Calendar app with all details pre-filled.
 
 ---
 
-## 🛠️ Tech Stack
-* **Frontend:** HTML/CSS/JS
-* **Backend:** Python (Flask) / Node.js
-* **AI:** Gemini/OpenAI API
-* **Tools:** Droidrun SDK
+## 🌟 Key Features
+
+### 1. 🧠 Smart Message Analysis
+Unlike basic regex, our AI understands **Hinglish** and context. It extracts:
+* **Summaries:** Short, actionable tasks.
+* **Deadlines:** Converts "tomorrow" or "next Friday" into actual dates.
+* *Powered by custom Prompt Engineering.*
+
+### 2. 📅 One-Tap Droidrun Sync
+We integrated the **Droidrun SDK** to bridge the gap between web and native Android.
+* No manual typing required.
+* Click "Add to Calendar" -> Event Saved.
+
+### 3. 📚 Topic Simplifier
+Stuck on a complex topic? Just type it in.
+* Get explanations in simple student-friendly language.
+* Includes real-world examples.
+
+---
+
+## 👥 Meet the Team
+
+### 🎨 Vaibhav Singh (Frontend & UI Lead)
+* **Architecture:** Designed the responsive Mobile-First UI using HTML/CSS/JS.
+* **Integration:** Connected the frontend to backend REST APIs (`/analyze`, `/explain`) for real-time data fetching.
+* **UX Logic:** Implemented error handling and success states for the Droidrun trigger.
+
+### 🧠 Adarsh (AI & Prompt Architect)
+* **Prompt Engineering:** Designed "System Instructions" to handle unstructured Hinglish inputs and force strict JSON outputs.
+* **Logic Design:** Built the core logic for deadline extraction and context understanding.
+* **Education Module:** Created the prompts for the "Topic Explainer" engine.
+
+### ⚙️ Antra (Backend & Automation Lead)
+* **Backend Core:** Developed the Flask server to handle API requests and route them to the AI model.
+* **Droidrun Integration:** Implemented the critical Droidrun SDK logic to trigger native Android intents.
+* **Product Demo:** Scripted and recorded the project pitch and demonstration video.
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+| Component | Technology |
+| :--- | :--- |
+| **Frontend** | HTML5, CSS3, JavaScript (ES6) |
+| **Backend** | Python (Flask), Node.js |
+| **AI Model** | Google Gemini Pro / OpenAI API |
+| **Automation** | Droidrun SDK |
+| **Version Control** | GitHub |
+
+---
+
+## 🔮 Future Scope
+* **WhatsApp Bot:** Integrating directly into WhatsApp so users don't even need to copy-paste.
+* **Voice Commands:** Adding voice-to-text for adding tasks.
+* **Notifications:** Reminder alerts before the deadlines.
+
+---
+
+### 💻 Installation (Run Locally)
+
+```bash
+# Clone the repository
+git clone [https://github.com/YourUsername/CampusGenie-backend.git](https://github.com/YourUsername/CampusGenie-backend.git)
+
+# Navigate to directory
+cd CampusGenie-backend
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
