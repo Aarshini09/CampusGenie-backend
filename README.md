@@ -1,4 +1,4 @@
-# 🎓 CampusGenie - YOUR_AI_BUDDY
+# 🎓 CampusGenie - AI Academic Assistant
 
 ![HTML5](https://img.shields.io/badge/Frontend-HTML5-orange?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/Style-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -42,19 +42,19 @@ Stuck on a complex topic? Just type it in.
 
 ---
 
-## 👥 Meet the Team
+## 👥 Team SynergyX
 
 ### 🎨 Vaibhav Singh (Frontend & UI Lead)
 * **Architecture:** Designed the responsive Mobile-First UI using HTML/CSS/JS.
 * **Integration:** Connected the frontend to backend REST APIs (`/analyze`, `/explain`) for real-time data fetching.
 * **UX Logic:** Implemented error handling and success states for the Droidrun trigger.
 
-### 🧠 Adarsh Mishra (AI & Prompt Architect)
+### 🧠 Adarsh (AI & Prompt Architect)
 * **Prompt Engineering:** Designed "System Instructions" to handle unstructured Hinglish inputs and force strict JSON outputs.
 * **Logic Design:** Built the core logic for deadline extraction and context understanding.
 * **Education Module:** Created the prompts for the "Topic Explainer" engine.
 
-### ⚙️ Antra Priyadarshini (Backend & Automation Lead)
+### ⚙️ Antra (Backend & Automation Lead)
 * **Backend Core:** Developed the Flask server to handle API requests and route them to the AI model.
 * **Droidrun Integration:** Implemented the critical Droidrun SDK logic to trigger native Android intents.
 * **Product Demo:** Scripted and recorded the project pitch and demonstration video.
