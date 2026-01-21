@@ -165,7 +165,7 @@
         }
     }
 
-    // --- API 2: ADD TO CALENDAR ---
+    // -- API 2: ADD TO CALENDAR --
     async function callCalendarAPI() {
         showLoading('btn-calendar', true);
 
@@ -187,18 +187,18 @@
             }
 
         } catch (error) {
-            // --- FIXED ALERT HERE ---
+            // -- FIXED ALERT HERE --
             alert("Failed to trigger Droidrun. Check connection.");
         } finally {
             showLoading('btn-calendar', false);
         }
     }
 
-    // --- API 3: AI TUTOR ---
+    // -- API 3: AI TUTOR --
     async function callTutorAPI() {
         const topic = document.getElementById('tutorInput').value;
         
-        // --- FIXED ALERT HERE ---
+        // -- FIXED ALERT HERE --
         if(!topic) return alert("Please enter a topic!");
 
         showLoading('btn-tutor', true);
